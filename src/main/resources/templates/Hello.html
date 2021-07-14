@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/jquery-2.1.4.js"></script>
+
+</head>
+<body>
+hello springBoot<br/>
+<!--<form action="getHello" method="post">-->
+<!--账号:<input type="text" name="acc"/><br/>-->
+<!--密码:<input type="password" name="pwd"/><br/>-->
+<!--<input type="button" value="登录"/>-->
+<!--</form>-->
+
+<!--<input type="button" value="ajax 请求" id="btn">-->
+</body>
+</html>
+<script type="text/javascript">
+    $("#btn").click(function(){
+        $.ajax({
+            url:'getHello4',
+            data:{username:"admin",password:"123456"},
+            method:'post',
+            dataType:'json', // 响应数据类型  格式
+            success:function(resp){
+                console.log(resp);
+            }
+
+        })
+    });
+</script>
