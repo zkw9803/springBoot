@@ -17,7 +17,6 @@ import java.util.List;
  * @desc:
  */
 @Controller
-@ResponseBody
 @RequestMapping("/admin")
 public class HelloController {
 @Autowired
@@ -25,12 +24,12 @@ private StuServiceImpl stuService;
 
     Student student=new Student();
     @RequestMapping("/hello")
-    public String hello(){
+    public @ResponseBody String hello(){
         System.out.println("springMVC我来了");
-        return "HelloWorld";
+        return "HelloWorld zkw";
     }
     @RequestMapping("/getLog")
-    public String getLog(String username,String password){
+    public @ResponseBody String getLog(String username,String password){
         System.out.println(username);
         System.out.println(password);
         student.setUsername(username);
@@ -45,7 +44,7 @@ private StuServiceImpl stuService;
         }
     }
     @RequestMapping("/getReg")
-    public String getReg(String username,String password){
+    public @ResponseBody String getReg(String username,String password){
         System.out.println(username);
         System.out.println(password);
 
@@ -60,7 +59,7 @@ private StuServiceImpl stuService;
         }
     }
     @RequestMapping("/getAdm")
-    public String getAdm(String username,String password){
+    public @ResponseBody String getAdm(String username,String password){
         System.out.println(username);
         System.out.println(password);
         if (username.equals("admin")&&password.equals("12345")){
