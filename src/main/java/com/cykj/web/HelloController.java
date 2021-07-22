@@ -26,7 +26,7 @@ private StuServiceImpl stuService;
     @RequestMapping("/hello")
     public @ResponseBody String hello(){
         System.out.println("springMVC我来了");
-        return "HelloWorld zkpw11";
+        return "HelloWorld zkpw1122";
     }
     @RequestMapping("/getLog")
     public @ResponseBody String getLog(String username,String password){
